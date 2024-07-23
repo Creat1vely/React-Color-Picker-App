@@ -19,12 +19,19 @@ function App() {
         color picker
       </h1>
 
-      <div className="color-preview" style={ { backgroundColor: color, height: "25px" } }
+      <div className="color-preview" style={ { backgroundColor: color } }
         onClick={ () => { handleColorCopy() } }>
-        { color }
+          <span>
+            { color }
+          </span>
       </div>
+
+      <label htmlFor="colorInput">
+        Choose an color:
+      </label>
  
-      <input type="color" value={ color } onChange={ handleColorChange }  className="color-input"/>
+      <input type="color" value={ color } onChange={ handleColorChange } className="color-input"
+        id="colorInput"/>
     </div>
   )
 }
