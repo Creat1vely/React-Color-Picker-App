@@ -1,5 +1,9 @@
 import { useState } from "react"
 
+// import creatively branding
+import CreativelyTitle from "./creatively-branding/CreativelyTitle";
+import CreativelyWebDevLinks from "./creatively-branding/CreativelyWebDevLinks";
+
 
 function App() {
   const [ color, setColor ] = useState("#ffffff");
@@ -15,23 +19,26 @@ function App() {
 
   return (
     <div className='app'>
-      <h1 className="app-title">
-        color picker
-      </h1>
+      <CreativelyTitle title="React Color Picker App"/>
 
       <div className="color-preview" style={ { backgroundColor: color } }
         onClick={ () => { handleColorCopy() } }>
           <span>
             { color }
           </span>
+          <span className="help-text">
+            ( click to copy )
+          </span>
       </div>
 
       <label htmlFor="colorInput">
-        Choose an color:
+        Choose an color and get the color code:
       </label>
  
       <input type="color" value={ color } onChange={ handleColorChange } className="color-input"
         id="colorInput"/>
+
+      <CreativelyWebDevLinks/>
     </div>
   )
 }

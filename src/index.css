@@ -35,9 +35,12 @@
     border: medium dashed lightgray;
     margin-bottom: 30px;
     display: grid;
-    place-items: center;
+    place-content: center;
     font-size: 3rem;
     letter-spacing: 0.125rem;
+}
+.help-text {
+    font-size: large;
 }
 
 /* styling the app's color input */
