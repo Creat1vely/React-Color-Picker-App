@@ -43,7 +43,7 @@ function App() {
       </div>
 
       <label htmlFor="colorInput">
-        Choose an color and get the color code:
+        Choose a color and get the color code:
       </label>
  
       {/* color input */}
